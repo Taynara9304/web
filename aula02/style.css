@@ -6,16 +6,7 @@ html, * {
     margin-top: 5px;
 }
 
-:target::before {
-    content: ""; /* Constrói um elemento "invisível" */
-    display: block;
-    height: 100px; /* Altura do espaçador */
-    margin: -100px 0 0; /* Margin top do espaçador */
-  }
-
 nav {
-    position: fixed;
-    z-index: 1000px;
     display: flex;
     background-color:rgba(197, 146, 255, 0.774);
     text-align: center;
@@ -57,4 +48,8 @@ li a:hover {
     color: black;
     text-decoration: underline;
     background-color: rgb(255, 246, 227);
+}
+
+.iframe1 {
+    display: none;
 }
