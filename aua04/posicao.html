@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displays</title>
+    <link rel="stylesheet" href="posicao.css">
+</head>
+<body>
+    <!--
+    static -> segue o fluxo do documento (top, left, etc não alteram)
+    relative -> segue  fluxo do documento (top, left, etc alteram a posição)
+    absolute -> são relativos aos elementos pais (top, left, etc alteram a posição)
+    fixed -> são relativos a tag html (não seguem a rolagem, ficam sempre fixos na tela)
+    stick (padão) -> são relativos aos elementos pais (não seguem a rolagem até certo ponto-->
+
+    <div class="elemento-pai">
+        <div class="elemento-filho">
+            eu sou outro elemento irmão
+
+            <div class="elemento-principal">
+                Eu sou o elemento principal
+            </div>
+
+            <div class="elemento-filho">
+                Eu sou outro elemento irmão
+            </div>
+        </div>
+    </div>
+</body>
+</html>

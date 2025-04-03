@@ -1,0 +1,29 @@
+html {
+    height: 800px;
+}
+
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.elemento-principal {
+    position: sticky;
+    left: 10px;
+    top: 10px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.elemento-pai {
+    position: relative;
+    height: 800px;
+    padding: 50px 10px;
+    background-color: #81adc8;
+}
+
+.elemento-filho {
+    padding: 10px;
+    background-color: #f2f2f2;
+
+}
