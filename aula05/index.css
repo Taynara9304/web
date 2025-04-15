@@ -32,6 +32,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+a {
+    color: white;
+}
+
 img {
     height: 300px;
 }
