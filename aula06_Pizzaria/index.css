@@ -1,0 +1,93 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    padding-right: 10px;
+}
+
+a {
+    color: orangered;
+    text-decoration: none;
+}
+
+.img-bem-vindo {
+    position: relative;
+    display: block;
+    width: 98vw;
+}
+
+.bem-vindo {
+    display: flex;
+    position: relative;
+    top: 50px;
+    justify-content: center;
+    color: white;
+}
+
+.container-texto {
+    position: absolute;
+    top: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao-ver-cardapio {
+    display: flex;
+    justify-content: center;
+    background-color: orangered;
+    width: 120px;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.botao-ver-cardapio a {
+    color: black;
+    font-weight: 600;
+}
+
+.cardapio {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.conteiner-pizza-cardapio {
+    background-color: rgb(217, 222, 228);
+    width: 300px;
+    margin: 10px;
+}
+
+.titulo-cardapio {
+    display: flex;
+    width: 98vw;
+    justify-content: center;
+}
+
+.descricao-cardapio {
+    margin: 20px 20px 10px 10px;
+}
+
+.img-pizza-cardapio {
+    width: 300px;
+    height: 300px;
+}
