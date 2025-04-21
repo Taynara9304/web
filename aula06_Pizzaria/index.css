@@ -4,7 +4,6 @@ html, body {
     font-family: "Montserrat";
 }
 
-
 header {
     position: fixed;
     width: 100vw;
@@ -19,6 +18,7 @@ nav {
 ul {
     display: flex;
     list-style: none;
+    gap: 30px;
 }
 
 li {
@@ -33,11 +33,13 @@ a {
 .img-bem-vindo {
     position: relative;
     display: block;
-    width: 97.8vw;
+    min-width: 98.9vw;
+    min-height: 350px;
+    max-height: 500px;
     filter: brightness(50%);
 }
 
-.bem-vindo {
+#bem-vindo {
     display: flex;
     position: relative;
     top: 50px;
@@ -67,7 +69,7 @@ a {
     font-weight: 600;
 }
 
-.cardapio {
+#cardapio {
     display: flex;
     justify-content: center;
     margin-top: 75px;
@@ -97,7 +99,7 @@ a {
     height: 300px;
 }
 
-.sobre-nos {
+#sobre-nos {
     background-image: url(imagens/pizza-sobre-nos.jpg);
     background-size: cover;
     background-position: center;
@@ -109,7 +111,7 @@ a {
     overflow: hidden;
 }
 
-.sobre-nos::before {
+#sobre-nos::before {
     content: "";
     position: absolute;
     top: 0;
@@ -127,7 +129,7 @@ a {
     text-align: center;
 }
 
-.contato {
+#contato {
     text-align: center;
     padding: 40px 20px;
 }
