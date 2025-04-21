@@ -1,7 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat";
 }
+
 
 header {
     position: fixed;
@@ -31,7 +33,8 @@ a {
 .img-bem-vindo {
     position: relative;
     display: block;
-    width: 98vw;
+    width: 97.8vw;
+    filter: brightness(50%);
 }
 
 .bem-vindo {
@@ -67,14 +70,16 @@ a {
 .cardapio {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 75px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .conteiner-pizza-cardapio {
     background-color: rgb(217, 222, 228);
     width: 300px;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .titulo-cardapio {
@@ -91,3 +96,71 @@ a {
     width: 300px;
     height: 300px;
 }
+
+.sobre-nos {
+    background-image: url(imagens/pizza-sobre-nos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sobre-nos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-texto-sobre-nos {
+    margin: 5px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.contato {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.info-contato {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+}
+
+.coluna a {
+    color: orange;
+    text-decoration: none;
+}
+
+.coluna a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333333;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+  
