@@ -101,7 +101,37 @@
                 </p>
                 </div>
             </div>
-              
+            
+            <div class="sugestao-pizza">
+                <h1>Envie sua solicitação de pizza!</h1>
+
+                <form>
+                    <label for="tipo-pizza">Tipo de pizza</label>
+                    <select name="tipo-pizza" id="tipo-pizza">
+                        <option value="escolha-tipo" selected>Selecione uma opção</option>
+                        <option value="tipo-doce">Pizza doce</option>
+                        <option value="tipo-salgada">Pizza salgada</option>
+                    </select> <br>
+
+                    <label for="">Descrição da pizza</label>
+                    <input type="text" name="tipo-pizza" id="tipo-pizza"> <br>
+
+                    <h2>Ingredientes obrigatórios</h2>
+                    <input type="checkbox" name="ingredientes" id="queijo-mussarela">
+                    <label for="queijo-mussarela">Queijo mussarela</label><br>
+                    <input type="checkbox" name="ingredientes" id="extrato-de-tomate">
+                    <label for="extrato-de-tomate">Massa de tomate</label><br>
+                    <input type="checkbox" name="ingredientes" id="catupiry">
+                    <label for="catupiry">Catupiry</label><br>
+                    <input type="checkbox" name="ingredientes" id="cebola">
+                    <label for="cebola">Cebola</label><br>
+
+                    <label for="valor-sugerido">Valor sugerido</label>
+                    <input type="number" name="valor-sugerido" id="valor-sugerido" min="1"> <br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </main>
 
