@@ -4,6 +4,10 @@ html, body {
     font-family: "Montserrat";
 }
 
+h1, h2 {
+    margin: 0px;
+}
+
 header {
     position: fixed;
     width: 100vw;
@@ -163,6 +167,64 @@ ul li a:hover {
 
 .coluna a:hover {
     text-decoration: underline;
+}
+
+.sugestao-pizza {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    padding: 20px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.elemento-formulario {
+    margin: 15px;
+}
+
+#tipo-pizza {
+    padding: 5px;
+    width: 500px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+
+#descricao-pizza {
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+
+#valor-sugerido {
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+}
+
+.botao {
+    font-family: "Montserrat";
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: rgb(13, 13, 117);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.botao-enviar {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
