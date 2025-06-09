@@ -1,0 +1,55 @@
+html, * {
+    margin: 0px;;
+}
+.container {
+    width: 30vw;
+    height: 35vh;
+    margin: 0 auto;
+    background-color: rgb(100, 133, 122);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 40px;
+    border-radius: 10px;
+}
+
+.cont-botoes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#resultado {
+    width: 26vw;
+    height: 50px;
+    border: 1px solid rgb(50, 66, 61);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.trio {
+    display: flex;
+}
+
+.num {
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgb(50, 66, 61);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+}
+
+.num:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(50, 66, 61);
+}
+
+.igual {
+    border: 1px solid rgb(50, 66, 61);
+    width: 160px;
+}
