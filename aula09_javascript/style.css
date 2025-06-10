@@ -3,7 +3,7 @@ html, * {
 }
 .container {
     width: 30vw;
-    height: 35vh;
+    height: 45vh;
     margin: 0 auto;
     background-color: rgb(100, 133, 122);
     color: white;
@@ -22,7 +22,7 @@ html, * {
 }
 
 #resultado {
-    width: 26vw;
+    width: 30vw;
     height: 50px;
     border: 1px solid rgb(50, 66, 61);
     border-radius: 5px;
