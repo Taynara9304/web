@@ -19,14 +19,21 @@ html, * {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
+    padding-left: 15px;
 }
 
 #resultado {
-    width: 30vw;
+    width: 250px;
     height: 50px;
     border: 1px solid rgb(50, 66, 61);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 2rem;
+    max-width: 100%;
+    display: block;
 }
 
 .trio {
