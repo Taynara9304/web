@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <div class="addTarefa">
+            <form>
+                <input type="text" name="addTarefa" id="addTarefa" placeholder="Digite sua tarefa">
+                <button type="sumbmit" class="botao" id="add" onclick="addTexto()">Adicionar</button>
+            </form>
+        </div>
+
+        <ul class="tarefas" id="listaTarefas">
+            <li class="tarefa-item"></li>
+        </ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
