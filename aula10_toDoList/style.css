@@ -18,19 +18,21 @@ h1 {
     margin-top: 10px;
     color: rgb(4, 4, 90);
     font-weight: 600;
+    margin-bottom: 3vh;
 }
 
 .addTarefa {
     width: 80%;
-    margin-bottom: 4vw;
+    margin-bottom: 3vw;
 }
 
 #addTarefa {
-    width: 70%;
+    width: 78%;
     border-radius: 5px;
-    padding: 3px;
+    padding: 8px;
     border: 1px solid rgb(7, 7, 145);
     color: rgb(4, 4, 90);
+    font-size: 20px;
 }
 
 .tarefas {
@@ -47,7 +49,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    border: 1px solid rgb(7, 7, 145);
 }
 
 .nomeTarefa {
@@ -68,6 +69,8 @@ h1 {
     background-color: rgb(84, 120, 190);
     color: white;
     width: 19%;
+    padding: 8px;
+
 }
 
 .botao {
@@ -75,9 +78,45 @@ h1 {
     border: 1px solid rgb(7, 7, 145);
     border-radius: 5px;
     padding: 3px;
+    font-size: 20px;
 }
 
 .botao:hover {
+    background-color: rgb(4, 4, 90);
+    color: white;
+}
+
+.filtros {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.concluida {
+    text-decoration: line-through;
+    background-color: rgba(144, 238, 144, 0.3);
+}
+
+.botaoFiltro {
+    width: 10vw;
+    background-color: rgb(87, 87, 148);
+    color: white;
+    border: 1px solid rgb(7, 7, 145);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.botao {
+    width: 20%;
+    height: 40px;
+    background-color: rgb(87, 87, 148);
+    color: white;
+    border: 1px solid rgb(7, 7, 145);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.botaoFiltro.ativo {
     background-color: rgb(4, 4, 90);
     color: white;
 }

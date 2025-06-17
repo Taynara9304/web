@@ -9,16 +9,20 @@
 <body>
     <div class="container">
         <h1>To-Do List</h1>
+        <form class="addTarefa">
+            <input type="text" name="addTarefa" id="addTarefa" placeholder="Digite sua tarefa">
+            <button type="submit" class="botao" id="add">Adicionar</button>
+        </form>
+        
 
-        <div class="addTarefa">
-            <form>
-                <input type="text" name="addTarefa" id="addTarefa" placeholder="Digite sua tarefa">
-                <button type="sumbmit" class="botao" id="add" onclick="addTexto()">Adicionar</button>
-            </form>
+        <div class="filtros">
+            <button class="botaoFiltro" data-filtro="todas">Todas</button>
+            <button class="botaoFiltro" data-filtro="pendentes">Pendentes</button>
+            <button class="botaoFiltro" data-filtro="concluidas">Concluídas</button>
+            <button class="botao" id="limpar">Limpar Tarefas</button>
         </div>
 
         <ul class="tarefas" id="listaTarefas">
-            <li class="tarefa-item"></li>
         </ul>
     </div>
 
