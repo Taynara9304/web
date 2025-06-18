@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #todo-form {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    input[type="text"] {
+      padding: 0.5rem;
+      width: 300px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #filters {
+      margin-bottom: 1rem;
+    }
+
+    #filters button {
+      margin: 0 0.2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    li {
+      background: #fff;
+      padding: 0.8rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 5px solid #007bff;
+    }
+
+    li.completed {
+      text-decoration: line-through;
+      color: gray;
+      border-left-color: green;
+    }
+
+    .task-actions button {
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <form id="todo-form">
+    <input type="text" id="task-input" placeholder="Digite a tarefa..." required />
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <div id="filters">
+    <button onclick="setFilter('all')">Todas</button>
+    <button onclick="setFilter('pending')">Pendentes</button>
+    <button onclick="setFilter('completed')">Concluídas</button>
+    <button onclick="clearTasks()">Limpar Tarefas</button>
+  </div>
+
+  <ul id="task-list"></ul>
+
+  <script>
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
+    const form = document.getElementById('todo-form');
+
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    let currentFilter = 'all';
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const text = taskInput.value.trim();
+      if (text) {
+        tasks.push({ text, completed: false });
+        taskInput.value = '';
+        saveTasks();
+        renderTasks();
+      }
+    });
+
+    function renderTasks() {
+      taskList.innerHTML = '';
+      const filteredTasks = tasks.filter(task => {
+        if (currentFilter === 'all') return true;
+        if (currentFilter === 'pending') return !task.completed;
+        if (currentFilter === 'completed') return task.completed;
+      });
+
+      filteredTasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.className = task.completed ? 'completed' : '';
+        li.innerHTML = `
+          <span>${task.text}</span>
+          <div class="task-actions">
+            <button onclick="toggleTask(${index})">${task.completed ? 'Reabrir' : 'Concluir'}</button>
+            <button onclick="deleteTask(${index})">Excluir</button>
+          </div>
+        `;
+        taskList.appendChild(li);
+      });
+    }
+
+    function toggleTask(index) {
+      tasks[index].completed = !tasks[index].completed;
+      saveTasks();
+      renderTasks();
+    }
+
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      saveTasks();
+      renderTasks();
+    }
+
+    function clearTasks() {
+      if (confirm('Tem certeza que deseja apagar todas as tarefas?')) {
+        tasks = [];
+        saveTasks();
+        renderTasks();
+      }
+    }
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      renderTasks();
+    }
+
+    function saveTasks() {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    // Inicializa a lista na primeira renderização
+    renderTasks();
+  </script>
+</body>
+</html>
